@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  dataLocation: '../assets/users.json'
+  dataLocation: '/assets/users.json'
 };
 
 /*

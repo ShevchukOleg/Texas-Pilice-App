@@ -1,1 +1,21 @@
-<p>all-user-info works!</p>
+<section>
+  <h2>Attention! The most dangerous criminals of our state</h2>
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let user of allUsers" class="col-12">
+        <div class="card text-center bg-warning mb-3">
+          <div class="cart-header">
+              <p>WANTED</p>
+              <p>Dead or alive</p>
+          </div>
+          <img [src]="user.picture" class="card-img-top" alt="bastard">
+          <div class="card-body">
+              <h5 class="card-title">{{user.name}}</h5>
+          </div>
+          <p>Reward: {{user.balance}}</p>
+          <button type="button" (click)="deleteUser(user._id)" class="btn btn-dark">Captured</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
