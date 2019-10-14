@@ -1,0 +1,53 @@
+<h1 mat-dialog-title class="text-center">Please, discribe offender:</h1>
+<div>
+  <form class="" (ngSubmit)="addUser()" [formGroup]="newUserForm">
+    <div class="d-flex flex-wrap justify-content-center">
+      <mat-form-field class="mx-2">
+          <input matInput placeholder="Name" formControlName="name">
+          <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error> -->
+      </mat-form-field>
+      <mat-form-field class="mx-2">
+          <input matInput placeholder="Age" formControlName="age">
+          <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error> -->
+      </mat-form-field>
+      <mat-form-field class="mx-2">
+        <mat-select placeholder="Gender" formControlName="gender">
+          <mat-option  *ngFor="let gender of genders" [value]="gender.value">
+              {{gender.viewValue}}
+          </mat-option>
+        </mat-select>
+          <!-- <input matInput placeholder="Gender" formControlName="gender"> -->
+          <!-- <mat-error *ngIf="gender.hasError('email')">
+            Please enter a valid email address
+          </mat-error> -->
+      </mat-form-field>
+      <mat-form-field class="mx-2">
+          <input matInput placeholder="Eye Color" formControlName="eyeColor">
+          <!-- <mat-error *ngIf="gender.hasError('email')">
+            Please enter a valid email address
+          </mat-error> -->
+      </mat-form-field>
+      <mat-form-field class="mx-2">
+          <input matInput placeholder="Personal info." formControlName="about">
+          <!-- <mat-error *ngIf="gender.hasError('email')">
+            Please enter a valid email address
+          </mat-error> -->
+      </mat-form-field>
+      <mat-form-field class="mx-2">
+          <input matInput placeholder="Reward" formControlName="balance">
+          <!-- <mat-error *ngIf="gender.hasError('email')">
+            Please enter a valid email address
+          </mat-error> -->
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions class="justify-content-center">
+      <button mat-button (click)="closeModal()">Close</button>
+      <button mat-button type="submit" [disabled]="!newUserForm.valid">Announce</button>
+    </div>
+  </form>
+</div>

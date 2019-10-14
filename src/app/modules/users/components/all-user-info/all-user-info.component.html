@@ -1,19 +1,39 @@
-<section>
-  <h2>Attention! The most dangerous criminals of our state</h2>
+<section class="b-gradient">
   <div class="container">
     <div class="row">
+      <div class="col-12 mt-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">Home</li>
+            <li class="breadcrumb-item active" aria-current="page">Battue</li>
+          </ol>
+        </nav>
+        <div class= "text-center mt-2">
+            <button type="button" class="btn btn-danger" (click)="openDialog()">Add a criminal</button>
+        </div>
+        <p class= "text-center f-teko mt-1">*If you have any suspicion or wish to report a criminal, press this button.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container pb-sm-5">
+    <div class="row">
+      <div class="col-12">
+          <h2 class = "text-center my-3">Attention! <br> The most dangerous criminals of our state:</h2>
+      </div>
       <div *ngFor="let user of allUsers" class="col-12">
-        <div class="card text-center bg-warning mb-3">
+        <div class="card text-center bg-card mb-3">
           <div class="cart-header">
-              <p>WANTED</p>
-              <p>Dead or alive</p>
+              <p class="f-carter-one mt-sm-3 mt-2 mb-0 mb-sm-1">WANTED</p>
+              <p class="f-teko mb-1">Dead or alive</p>
           </div>
           <img [src]="user.picture" class="card-img-top" alt="bastard">
-          <div class="card-body">
-              <h5 class="card-title">{{user.name}}</h5>
+          <div class="card-body pb-1">
+              <h4 class="mb-1"><a routerLink="/user/{{user._id}}">{{user.name}}</a></h4>
+              <p class="f-teko">Reward: <span class="text-green">{{user.balance}}</span></p>
           </div>
-          <p>Reward: {{user.balance}}</p>
-          <button type="button" (click)="deleteUser(user._id)" class="btn btn-dark">Captured</button>
+          <button type="button" (click)="deleteUser(user._id)" class="btn btn-dark f-carter-one">Captured</button>
         </div>
       </div>
     </div>

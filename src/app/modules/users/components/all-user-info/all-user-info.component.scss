@@ -1,0 +1,16 @@
+section {
+  background: #e2c77c;
+  .card-img-top {
+    border-radius: calc(.25rem - 1px);
+  }
+}
+
+.bg-card {
+  background: rgb(231, 158, 74);
+}
+
+.card-body {
+  p {
+    margin-bottom: 0;
+  }
+}

@@ -1,7 +1,7 @@
 export interface User {
   _id: string;
   guid: string;
-  isActive: false;
+  isActive: boolean;
   balance: string;
   picture: string;
   age: number;

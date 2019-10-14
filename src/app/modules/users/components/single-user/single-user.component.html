@@ -1,1 +1,80 @@
-<p>single-user works!</p>
+<section class="b-gradient">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mt-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">Home</li>
+            <li class="breadcrumb-item" aria-current="page">Battue</li>
+            <li class="breadcrumb-item active" aria-current="page">Murderer</li>
+          </ol>
+        </nav>
+      </div>
+   </div>
+  </div>
+</section>
+<section class="adaptive-height">
+  <div class="container">
+    <div class="row flex-wrap pt-1">
+      <div class="col-md-4">
+        <h3 class="text-uppercase text-center mb-1">Crimimal history report</h3>
+        <table class="mx-auto f-teko">
+          <tr>
+            <td>Name:</td>
+            <td>{{user?.name}}</td>
+          </tr>
+          <tr>
+            <td>Age:</td>
+            <td>{{user?.age}}</td>
+          </tr>
+          <tr>
+            <td>Gender:</td>
+            <td>{{user?.gender}}</td>
+          </tr>
+          <tr>
+            <td>Eye color:</td>
+            <td>{{user?.eyeColor}}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-4">
+        <div class="image-wrapper mx-auto mb-3">
+          <img [src]="user?.picture" alt="{{user?.name}}">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3 class="mb-1 text-center">United States investigation bureau</h3>
+        <table class="mx-auto f-teko">
+          <tr>
+            <td>№:</td>
+            <td>{{user?._id}}</td>
+          </tr>
+          <tr>
+            <td>Started:</td>
+            <td>{{user?.registered | convertDate}}</td>
+          </tr>
+          <tr>
+            <td>Reward:</td>
+            <td class="text-green">{{user?.balance}}</td>
+          </tr>
+          <tr>
+            <td>Band:</td>
+            <td>{{user?.company}}</td>
+          </tr>
+          <tr>
+            <td>Last seen:</td>
+            <td><span>Long:</span> {{user?.longitude}}<span> Lat:</span> {{user?.latitude}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <h4 class="text-center">Description:</h4>
+        <p class="text-justify">{{user?.about}}</p>
+        <h4 class="text-center">Tags</h4>
+        <p class="text-center f-teko">{{user?.tags.join(", ")}}</p>
+      </div>
+    </div>
+  </div>
+</section>

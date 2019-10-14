@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/purple-green.css';
+
+body {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Special Elite', cursive;
+    a, a:hover {
+      color: #2c240d;
+      font-weight: 600;
+    }
+  }
+
+  .text-green {
+    color: rgb(24, 117, 15);
+    font-size: 22px;
+  }
+
+  .b-gradient:first-child {
+    background: linear-gradient(#DA8626, #E9B982 60%, #E2C77C 90%);
+  }
+
+  p {
+    text-indent: 1.5em;
+  }
+}
+
+
+.f-teko {
+  font-family: 'Teko', sans-serif;
+  font-size: 20px;
+}
+
+.f-carter-one {
+  font-family: 'Carter One', cursive;
+  font-size: 25px;
+  font-weight: 500;
+  color: #ce1414;
+}

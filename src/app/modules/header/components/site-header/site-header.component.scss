@@ -2,7 +2,30 @@ header {
   background-color: #da8626
 }
 
+.logo-wrapper {
+  max-height: 150px;
+}
+
 img[alt^="coat"] {
-  object-fit: contain;
+  object-fit: cover;
   height: 150px;
+}
+
+li {
+  list-style-type: none;
+  padding: 0 5px;
+  line-height: 100%;
+  text-align: center;
+
+}
+
+@media(max-width: 600px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  img[alt^="coat"] {
+    object-fit: cover;
+    height: 120px;
+  }
 }
