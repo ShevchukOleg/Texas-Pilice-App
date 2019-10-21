@@ -65,7 +65,7 @@ export class UsersDataService {
    * @param newUser - дані про нового користувача
    */
   public addNewUser(newUser: User) {
-    this.allUsers.push(newUser);
+    this.allUsers.unshift(newUser);
     console.log('New user add into base', this.allUsers);
     this.allUsersSource.next(this.allUsers);
   }
