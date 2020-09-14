@@ -71,7 +71,7 @@ export class AllUserInfoComponent implements OnInit {
     dialogRef.afterClosed().subscribe( result => {
       if (result.name !== '') {
         console.log('The dialog was closed', result);
-        this.dialogInfo = Object.assign(result);
+        this.dialogInfo = Object.assign({}, result);
         this.userDataService.addNewUser(this.dialogInfo);
       } else {
         console.log('Empty object resived from form');
