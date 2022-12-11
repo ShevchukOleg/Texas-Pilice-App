@@ -23,7 +23,7 @@
     "@angular/router": "~11.0.2",
     "bootstrap": "^4.5.3",
     "compression": "^1.7.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0",
     "primeicons": "^4.1.0",
