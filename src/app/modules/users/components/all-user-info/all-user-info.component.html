@@ -30,23 +30,10 @@
           The most dangerous criminals of our state:
         </h2>
       </div>
-      <!-- <div *ngFor="let user of allUsers" class="col-12">
-        <div class="card text-center bg-card mb-3">
-          <div class="cart-header">
-              <p class="f-carter-one mt-sm-3 mt-2 mb-0 mb-sm-1">WANTED</p>
-              <p class="f-teko mb-1">Dead or alive</p>
-          </div>
-          <img [src]="user.picture" class="card-img-top" alt="bastard">
-          <div class="card-body pb-1">
-              <h4 class="mb-1"><a routerLink="/user/{{user._id}}">{{user.name}}</a></h4>
-              <p class="f-teko">Reward: <span class="text-green">{{user.balance}}</span></p>
-          </div>
-          <button type="button" (click)="deleteUser(user._id)" class="btn btn-dark f-carter-one">Captured</button>
-        </div>
-      </div> -->
       <app-user-record
         *ngFor="let user of allUsers"
         [userInfo]="user"
+        (remove)="deleteUser($event)"
       ></app-user-record>
     </div>
   </div>

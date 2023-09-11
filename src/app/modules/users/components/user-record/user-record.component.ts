@@ -1,5 +1,4 @@
-import { Component, Input, OnInit, Output } from "@angular/core";
-import { EventEmitter } from "protractor";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { User } from "src/app/modules/users/interfaces/userInterface";
 
 @Component({
@@ -7,11 +6,7 @@ import { User } from "src/app/modules/users/interfaces/userInterface";
   templateUrl: "./user-record.component.html",
   styleUrls: ["./user-record.component.scss"],
 })
-export class UserRecordComponent implements OnInit {
+export class UserRecordComponent {
   @Input() public userInfo!: User;
   @Output() public remove = new EventEmitter<string>();
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
