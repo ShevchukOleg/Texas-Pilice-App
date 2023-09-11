@@ -7,9 +7,10 @@ import { ConvertDatePipe } from '../../pipes/convert-date.pipe';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { ModalModule } from '../modal/modal.module';
+import { UserRecordComponent } from './components/user-record/user-record.component';
 
 @NgModule({
-  declarations: [AllUserInfoComponent, SingleUserComponent, ConvertDatePipe],
+  declarations: [AllUserInfoComponent, SingleUserComponent, ConvertDatePipe, UserRecordComponent],
   imports: [
     CommonModule,
     UsersRoutingModule,

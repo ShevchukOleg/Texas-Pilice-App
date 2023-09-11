@@ -8,10 +8,15 @@
             <li class="breadcrumb-item active" aria-current="page">Battue</li>
           </ol>
         </nav>
-        <div class= "text-center mt-2">
-            <button type="button" class="btn btn-danger" (click)="openDialog()">Add a criminal</button>
+        <div class="text-center mt-2">
+          <button type="button" class="btn btn-danger" (click)="openDialog()">
+            Add a criminal
+          </button>
         </div>
-        <p class= "text-center f-teko mt-1">*If you have any suspicion or wish to report a criminal, press this button.</p>
+        <p class="text-center f-teko mt-1">
+          *If you have any suspicion or wish to report a criminal, press this
+          button.
+        </p>
       </div>
     </div>
   </div>
@@ -20,9 +25,12 @@
   <div class="container pb-sm-5">
     <div class="row">
       <div class="col-12">
-          <h2 class = "text-center my-3">Attention! <br> The most dangerous criminals of our state:</h2>
+        <h2 class="text-center my-3">
+          Attention! <br />
+          The most dangerous criminals of our state:
+        </h2>
       </div>
-      <div *ngFor="let user of allUsers" class="col-12">
+      <!-- <div *ngFor="let user of allUsers" class="col-12">
         <div class="card text-center bg-card mb-3">
           <div class="cart-header">
               <p class="f-carter-one mt-sm-3 mt-2 mb-0 mb-sm-1">WANTED</p>
@@ -35,7 +43,11 @@
           </div>
           <button type="button" (click)="deleteUser(user._id)" class="btn btn-dark f-carter-one">Captured</button>
         </div>
-      </div>
+      </div> -->
+      <app-user-record
+        *ngFor="let user of allUsers"
+        [userInfo]="user"
+      ></app-user-record>
     </div>
   </div>
 </section>

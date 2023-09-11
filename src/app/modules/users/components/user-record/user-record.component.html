@@ -1,0 +1,24 @@
+<div class="col-12">
+  <div class="card text-center bg-card mb-3">
+    <div class="cart-header">
+      <p class="f-carter-one mt-sm-3 mt-2 mb-0 mb-sm-1">WANTED</p>
+      <p class="f-teko mb-1">Dead or alive</p>
+    </div>
+    <img [src]="userInfo.picture" class="card-img-top" alt="bastard" />
+    <div class="card-body pb-1">
+      <h4 class="mb-1">
+        <a routerLink="/user/{{ userInfo._id }}">{{ userInfo.name }}</a>
+      </h4>
+      <p class="f-teko">
+        Reward: <span class="text-green">{{ userInfo.balance }}</span>
+      </p>
+    </div>
+    <button
+      type="button"
+      (click)="remove.emit(userInfo._id)"
+      class="btn btn-dark f-carter-one"
+    >
+      Captured
+    </button>
+  </div>
+</div>
